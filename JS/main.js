@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   }
   splitToCharacters (randomWord);
 
-  //.sort--sorts the items of an array alphabetically pr numerically
+  //.sort--sorts the items of an array alphabetically or numerically
   var scramble = splitToCharacters (randomWord);
   scramble.sort()
   console.log(scramble);
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     console.log(rmv);
     return rmv;
   }
-  removeComma(joinArray).toUpperCase;
+  removeComma(joinArray).;
 
 
 
