@@ -39,7 +39,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
     console.log(rmv);
     return rmv;
   }
-  removeComma(joinArray).;
+  removeComma(joinArray);
+
+  var gameWords = removeComma(joinArray);
+  var scrambledWords = document.getElementById(actualGame).innerHTML = gameWords;
 
 
 
