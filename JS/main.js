@@ -10,11 +10,20 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   //var count = 0;
 
-  var wordListArray = ["program","enthrall", "official", "flex", "cascading", "developer", "add", "multiply", "technology", "software", "function"]
+  var wordListArray = ["program","enthrall", "official", "flex", "cascading", "developer", "syntax", "multiply", "technology", "software", "function", "sheet"]
 
   var randomWord = wordListArray[Math.floor(Math.random() * wordListArray.length)];
-    console.log(randomWord);
 
+    //access a randomWord
+    //split the randomword into array (Arr) of letters
+    //then randomly
+
+  function scrambleWord(randomWord) {
+    var characters = randomWord.split("");
+    console.log(characters);
+    return characters;
+  }
+  scrambleWord (randomWord);
 
 
 
