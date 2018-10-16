@@ -82,10 +82,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
      console.log(userInput);
      if (userInput.toUpperCase()   === randomWord) {
        console.log(userInput.toUpperCase );
-       console.log( "You are correct!");
+       document.getElementById("correctOrIncorrect").innerHTML="You are correct!"
        }
        else {
-         console.log( "Sorry this is incorrect. The answer is: " + randomWord);
+         document.getElementById("correctOrIncorrect").innerHTML="Sorry this is incorrect. The answer is: " + randomWord
        }
    });
 
