@@ -8,7 +8,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
     document.getElementById("instructionText").innerHTML = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididun";
   }
 
-  var wordListArray = ["PROGRAM","VARIABLE", "OFFICIAL", "FLEX", "CASCADING", "DEVELOPER", "SYNTAX", "MULTIPLY", "TECHNOLOGY", "SOFTWARE", "FUNCTION", "SHEET"]
+  var wordListArray = [
+    "ARRAY" value="array",
+    "FLEX" value="flex" ,
+    "CASCADING" value="cascading" ,
+    "SHOW" value="show",
+    "SYNTAX" value="syntax",
+    "MULTIPLY" value="multiply",
+    "TECHNOLOGY" value="technology" ,
+    "SHEET" value="sheet"]
 
   var randomWord = wordListArray[Math.floor(Math.random() * wordListArray.length)];
 
@@ -56,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   console.log(underscoreArray);
 
   //.join --joins the elements of an array into a string + returns the string
-  // //joins the [_,_,] into a string to remove commas
+  //joins the [_,_,] into a string to remove commas
   var joinArray = underscoreArray.join();
   console.log(joinArray);
 
@@ -64,12 +72,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
   var addSpaceBtwUnderScores = joinArray.replace(/,/g , " ");
   console.log(addSpaceBtwUnderScores);
 
-  // //the underscore will now be displayed on the webpage in place of the text in "User Types" of html file
+  //the underscore will now be displayed on the webpage in place of the text in "User Types" of html file
 
    var writeUnderscoreOnPage = document.getElementById("underscore").innerHTML = addSpaceBtwUnderScores;
 
-  
 
+//getting the input
+//console log the right letters
 
 
 
