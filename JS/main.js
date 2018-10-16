@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     console.log(rmv);
     return rmv;
   }
-  removeComma(joinArray);
+  //removeComma(joinArray);
 
   //displays the string without commas onto the webpage
   var actualGameWords = removeComma(joinArray);
@@ -54,6 +54,18 @@ document.addEventListener("DOMContentLoaded", function (event) {
   }
   console.log(userArray);
 
+  //.join --joins the elements of an array into a string + returns the string
+  //joins the [_,_,] into a string
+  var joinArr = userArray.join();
+  console.log(joinArr);
+
+   //need to remove the commas between the underscores
+  removeComma(joinArr);
+
+  //the underscore will now be displayed on the webpage in place of the text in "User Types" of html file
+
+  var spaceBtwUnderscores = removeComma(joinArr);
+  var writeUnderscoreOnPage = document.getElementById("underscore").innerHTML = spaceBtwUnderscores;
 
 
 
