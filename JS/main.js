@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function (event) {
 
-  var userName = prompt("Hi there! What is your name?");
-  alert("Welcome to Word Scramble " + userName + "." + " This is an opportunity to improve your spelling skills and expand your vocabulary. So Enjoy!");
+//var userName = prompt("Hi there! What is your name?");
+  //alert("Welcome to Word Scramble " + userName + "." + " This is an opportunity to improve your spelling skills and expand your vocabulary. So Enjoy!");
 
   //When you click the button, it should display the instructions//
   function instructionBtn (){
@@ -9,14 +9,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
   }
 
   var wordListArray = [
-    "ARRAY" value="array",
-    "FLEX" value="flex" ,
-    "CASCADING" value="cascading" ,
-    "SHOW" value="show",
-    "SYNTAX" value="syntax",
-    "MULTIPLY" value="multiply",
-    "TECHNOLOGY" value="technology" ,
-    "SHEET" value="sheet"]
+    "ARRAY",
+    "FLEX"  ,
+    "CASCADING" ,
+    "SHOW" ,
+    "SYNTAX",
+    "MULTIPLY" ,
+    "TECHNOLOGY"  ,
+    "SHEET"]
 
   var randomWord = wordListArray[Math.floor(Math.random() * wordListArray.length)];
 
@@ -76,9 +76,21 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
    var writeUnderscoreOnPage = document.getElementById("underscore").innerHTML = addSpaceBtwUnderScores;
 
+   //User's input SECTION
+   document.getElementById("testButtonId").addEventListener("click",function(){
+     var userInput = document.getElementById("test").value;
+     console.log(userInput);
+     if (userInput.toUpperCase()   === randomWord) {
+       console.log(userInput.toUpperCase );
+       console.log( "You are correct!");
+       }
+       else {
+         console.log( "Sorry this is incorrect. The answer is: " + randomWord);
+       }
+   });
 
-//getting the input
-//console log the right letters
+
+
 
 
 
