@@ -3,12 +3,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
   var userName = prompt("Hi there! What is your name?");
   alert("Welcome to Word Scramble " + userName + "." + " This is an opportunity to improve your spelling skills and expand your vocabulary. So Enjoy!");
 
-//When you click the button, it should display the instructions//
+  //When you click the button, it should display the instructions//
   function instructionBtn (){
     document.getElementById("instructionText").innerHTML = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididun";
   }
 
-  var wordListArray = ["PROGRAM","ENTHRALL", "OFFICIAL", "FLEX", "CASCADING", "DEVELOPER", "SYNTAX", "MULTIPLY", "TECHNOLOGY", "SOFTWARE", "FUNCTION", "SHEET"]
+  var wordListArray = ["PROGRAM","VARIABLE", "OFFICIAL", "FLEX", "CASCADING", "DEVELOPER", "SYNTAX", "MULTIPLY", "TECHNOLOGY", "SOFTWARE", "FUNCTION", "SHEET"]
 
   var randomWord = wordListArray[Math.floor(Math.random() * wordListArray.length)];
 
@@ -39,13 +39,17 @@ document.addEventListener("DOMContentLoaded", function (event) {
     console.log(rmv);
     return rmv;
   }
-  //removeComma(joinArray);
+  removeComma(joinArray);
 
+  //displays the string without commas onto the webpage
   var actualGameWords = removeComma(joinArray);
-
   var scrambledWords = document.getElementById("actualGameWords").innerHTML = actualGameWords;
 
-
+  var userArray = [];
+  for (var i = 0; i < actualGameWords.length; i++) {
+    userArray[i] = "_";
+  }
+  console.log(userArray);
 
 
 
