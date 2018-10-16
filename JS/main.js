@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     document.getElementById("instructionText").innerHTML = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididun";
   }
 
-  var wordListArray = ["program","enthrall", "official", "flex", "cascading", "developer", "syntax", "multiply", "technology", "software", "function", "sheet"]
+  var wordListArray = ["PROGRAM","ENTHRALL", "OFFICIAL", "FLEX", "CASCADING", "DEVELOPER", "SYNTAX", "MULTIPLY", "TECHNOLOGY", "SOFTWARE", "FUNCTION", "SHEET"]
 
   var randomWord = wordListArray[Math.floor(Math.random() * wordListArray.length)];
 
@@ -31,19 +31,19 @@ document.addEventListener("DOMContentLoaded", function (event) {
   var joinArray = scramble.join();
   console.log(joinArray);
 
-//this function removes the commas in the string
-// replace the commas with what ever character you want, e.g I replaced the commas with space
-//g flag - generic expression that replaces all
+  //this function removes the commas in the string
+  // replace the commas with what ever character you want, e.g I replaced the commas with space
+  //g flag - generic expression that replaces all
   function removeComma(joinArray) {
     var rmv = joinArray.replace(/,/g , " ");
     console.log(rmv);
     return rmv;
   }
-  removeComma(joinArray);
+  //removeComma(joinArray);
 
-  var gameWords = removeComma(joinArray);
-  var scrambledWords = document.getElementById(actualGame).innerHTML = gameWords;
+  var actualGameWords = removeComma(joinArray);
 
+  var scrambledWords = document.getElementById("actualGameWords").innerHTML = actualGameWords;
 
 
 
