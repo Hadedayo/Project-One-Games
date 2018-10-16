@@ -68,12 +68,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
    var writeUnderscoreOnPage = document.getElementById("underscore").innerHTML = addSpaceBtwUnderScores;
 
-  // function removeComma(joinArray) {
-  //   var rmv = joinArray.replace(/,/g , " ");
-  //   console.log(rmv);
-  //   return rmv;
-  // }
-
+  
 
 
 
