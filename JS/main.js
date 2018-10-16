@@ -45,6 +45,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
   var actualGameWords = removeComma(joinArray);
   var scrambledWords = document.getElementById("actualGameWords").innerHTML = actualGameWords;
 
+  //created an empty array
+  //for loop--> makes sure that for the length of random scrambled word, I need to have the same number of underscores
+  //Replace the empty array with underscores
   var userArray = [];
   for (var i = 0; i < actualGameWords.length; i++) {
     userArray[i] = "_";
