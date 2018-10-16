@@ -35,40 +35,44 @@ document.addEventListener("DOMContentLoaded", function (event) {
   // replace the commas with what ever character you want, e.g I replaced the commas with space
   //g flag - generic expression that replaces all
   function removeComma(joinArray) {
-    var rmv = joinArray.replace(/,/g , " ");
+    var rmv = joinArray.replace(/,/g , "");
     console.log(rmv);
     return rmv;
   }
-  //removeComma(joinArray);
+  removeComma(joinArray);
 
   //displays the string without commas onto the webpage
   var actualGameWords = removeComma(joinArray);
-  var scrambledWords = document.getElementById("actualGameWords").innerHTML = actualGameWords;
+  console.log("a="+actualGameWords.length);
+  var scrambledWordsOnScreen = document.getElementById("actualGameWords").innerHTML = actualGameWords;
 
   //created an empty array
   //for loop--> makes sure that for the length of random scrambled word, I need to have the same number of underscores
-  //Replace the empty array with underscores
-  var userArray = [];
+  //Replaces the empty array with underscores
+  var underscoreArray = [];
   for (var i = 0; i < actualGameWords.length; i++) {
-    userArray[i] = "_";
-  }
-  console.log(userArray);
+   underscoreArray[i] = "_";
+   }
+  console.log(underscoreArray);
 
   //.join --joins the elements of an array into a string + returns the string
-  //joins the [_,_,] into a string
-  var joinArr = userArray.join();
-  console.log(joinArr);
+  // //joins the [_,_,] into a string to remove commas
+  var joinArray = underscoreArray.join();
+  console.log(joinArray);
 
-   //need to remove the commas between the underscores
-  removeComma(joinArr);
+  //joinArray contains a string of underscore with commas, now replace the commas with spaces
+  var addSpaceBtwUnderScores = joinArray.replace(/,/g , " ");
+  console.log(addSpaceBtwUnderScores);
 
-  //the underscore will now be displayed on the webpage in place of the text in "User Types" of html file
+  // //the underscore will now be displayed on the webpage in place of the text in "User Types" of html file
 
-  var spaceBtwUnderscores = removeComma(joinArr);
-  var writeUnderscoreOnPage = document.getElementById("underscore").innerHTML = spaceBtwUnderscores;
+   var writeUnderscoreOnPage = document.getElementById("underscore").innerHTML = addSpaceBtwUnderScores;
 
-
-
+  // function removeComma(joinArray) {
+  //   var rmv = joinArray.replace(/,/g , " ");
+  //   console.log(rmv);
+  //   return rmv;
+  // }
 
 
 
