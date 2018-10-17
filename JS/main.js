@@ -40,13 +40,58 @@ document.addEventListener("DOMContentLoaded", function (event) {
     console.log("a="+actualGameWords.length);
     var scrambledWordsOnScreen = document.getElementById("actualGameWords").innerHTML = actualGameWords;
     }
-    randomWordGen();
+    //randomWordGen();
 
     document.getElementById('Hints').addEventListener("click", function (event) {
       var Hint = document.getElementById("hintInformation").innerHTML = "Give me Hintss";
     })
 
-  
+
+
+    var count = 60;
+    setInterval(function(){
+      if (count > 0) {
+        count --;
+        console.log(count);
+        document.getElementById("counter").innerHTML = count;
+      };
+      if (count < 10) {
+        document.getElementById("counter").style.color = "red";
+      }
+    }, 1000);
+
+
+
+
+
+      // make a set interval and have it call a function every second
+      // the function is going to first check if count is greater than 0
+      // if it is greater than 0, decrease count by 1
+      // Then, set counter's html to count
+      // if it's not greater than 0, end the game
+
+
+      // var counter = 60;
+      // var interval = setInterval(function() {
+      //     counter--;
+      //     // Display 'counter' wherever you want to display it.
+      //     if (counter <= 0) {
+      //      		clearInterval(interval);
+      //       	$('#timer').html("<h3>Game Over</h3>");
+      //         return;
+      //     }
+      //     else{
+      //     	$('#time').text(counter);
+      //       console.log("Timer --> " + counter);
+      //     }
+
+    //  }, 1000);
+
+      // if (counter < 5) {
+      //   document.getElementById("timer").style.color="red";
+      // }
+
+
 
 
        //User's input SECTION
