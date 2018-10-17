@@ -5,7 +5,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   //When you click the button, it should display the instructions//
 
-  var wordListArray = ["DISCOMBOBULATE", "FLEX", "CASCADING", "SHOW" , "SYNTAX", "MULTIPLY" , "TECHNOLOGY" , "SHEET", "SOFTWARE", "ENTHRALL"]
+  var gameScore = 0;
+  var a=5;
+
+  var wordListArray = ["DISCOMBOBULATE", "FLEX", "CASCADING", "SHOW" , "SYNTAX", "MULTIPLY" , "TECHNOLOGY" , "SHEET", "SPLIT", "ENTHRALL"]
   var randomWord = wordListArray[Math.floor(Math.random() * wordListArray.length)];
 
   function splitToCharacters(randomWord) {
@@ -27,17 +30,19 @@ document.addEventListener("DOMContentLoaded", function (event) {
   // }
 
   function countdown() {
-    var count = 60;
-  setInterval(function(){
+    var count = 61;
+    setInterval(function(){
     if (count > 0) {
       count --;
       console.log(count);
       document.getElementById("counter").innerHTML = count;
     };
-    if (count < 10) {
+    if (count < 11) {
       document.getElementById("counter").style.color = "red";
     }
-
+    if (count == 0) {
+      document.getElementById("counter").innerHTML = "GAME OVER";
+    }
   },
     1000);
   }
@@ -66,18 +71,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
     console.log("a="+actualGameWords.length);
     document.getElementById("actualGameWords").innerHTML = actualGameWords;
   }
-    //randomWordGen();
-
-  document.getElementById('Hints').addEventListener("click", function (event) {
-    var Hint = document.getElementById("hintInformation").innerHTML = "Give me Hintss";
-  })
-
-
+  
     // make a set interval and have it call a function every second
     // the function is going to first check if count is greater than 0
     // if it is greater than 0, decrease count by 1
     // Then, set counter's html to count
     // if it's not greater than 0, end the game
+
 
 
 
@@ -91,14 +91,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
      console.log(userInput.toUpperCase );
      document.getElementById("correctOrIncorrect").innerHTML="You are correct!"
      document.getElementById("correctOrIncorrect").style.backgroundColor = "green";
+     randomWordGen();
+     gameScore ++;
      }
      else {
        document.getElementById("correctOrIncorrect").innerHTML="Incorrect. The answer was: " + randomWord
        document.getElementById("correctOrIncorrect").style.backgroundColor = "red";
      }
     randomWordGen();
-    document.getElementById("userInput").value.innerHTML= " ";
- })
+     })
 
  document.getElementById("playGame").addEventListener("click",function(){
    countdown();
@@ -107,6 +108,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
  })
 
 
+  // if (userInput == randomWord) {
+  //   var score = initialScore ++;
+  //   document.getElementById("score").innerHTML =+ " score,";
+  // }
 
 
 
