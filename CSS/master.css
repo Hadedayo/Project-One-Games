@@ -1,5 +1,5 @@
 body{
-  background-color: lightgreen;
+  background-color: white;
 }
 
 /* input:invalid {
@@ -9,3 +9,14 @@ body{
 input:valid {
   border: 2px solid black;
 } */
+.containerGame{
+  border: 1px dashed orange;
+}
+
+#actualGameWords{
+  float: left;
+}
+
+#correctOrIncorrect{
+  align-content: center;
+}

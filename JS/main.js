@@ -4,11 +4,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
   //alert("Welcome to Word Scramble " + userName + "." + " This is an opportunity to improve your spelling skills and expand your vocabulary. So Enjoy!");
 
   //When you click the button, it should display the instructions//
-  document.getElementById('instructionBtn').addEventListener("click", function (event) {
-    var displayInstructions = document.getElementById("instructionText").innerHTML = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididun";
-  })
 
-  var wordListArray = ["ARRAY", "FLEX", "CASCADING", "SHOW" , "SYNTAX", "MULTIPLY" , "TECHNOLOGY" , "SHEET"]
+  var wordListArray = ["DISCOMBOBULATE", "FLEX", "CASCADING", "SHOW" , "SYNTAX", "MULTIPLY" , "TECHNOLOGY" , "SHEET", "SOFTWARE", "ENTHRALL"]
   var randomWord = wordListArray[Math.floor(Math.random() * wordListArray.length)];
 
   function randomWordGen() {
@@ -32,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     // replace the commas with what ever character you want, e.g I replaced the commas with space
     //g flag - generic expression that replaces all
     function removeComma(joinArray) {
-      var rmv = joinArray.replace(/,/g , "");
+      var rmv = joinArray.replace(/,/g , " ");
       console.log(rmv);
       return rmv;
     }
@@ -45,42 +42,79 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
     randomWordGen();
 
+    document.getElementById('Hints').addEventListener("click", function (event) {
+      var Hint = document.getElementById("hintInformation").innerHTML = "Give me Hintss";
+    })
+
+  
+
+
+       //User's input SECTION
+       document.getElementById("testButtonId").addEventListener("click",function(){
+         var userInput = document.getElementById("test").value;
+         console.log(userInput);
+         if (userInput.toUpperCase() === randomWord) {
+           console.log(userInput.toUpperCase );
+           document.getElementById("correctOrIncorrect").innerHTML="You are correct!"
+           document.getElementById("correctOrIncorrect").style.backgroundColor = "green";
+           }
+           else {
+             document.getElementById("correctOrIncorrect").innerHTML="Incorrect. The answer is: " + randomWord
+             document.getElementById("correctOrIncorrect").style.backgroundColor = "red";
+           }
+       })
+
+
+
+      //  function gameTimer() {
+      //    var timeleft = 15;
+      //    var gameTimer = setInterval(function(){
+      //      document.getElementById("progressBar").value = timeleft;
+      //       if(timeleft <= 0)
+      //         clearInterval(gameTimer);
+      //     },1000);
+      // }
+      // gameTimer();
+
+
+
+
+
+
     //created an empty array
     //for loop--> makes sure that for the length of random scrambled word, I need to have the same number of underscores
     //Replaces the empty array with underscores
-    var underscoreArray = [];
-    for (var i = 0; i < actualGameWords.length; i++) {
-     underscoreArray[i] = "_";
-     }
-    console.log(underscoreArray);
+    // var underscoreArray = [];
+    // for (var i = 0; i < actualGameWords.length; i++) {
+    //  underscoreArray[i] = "_";
+    //  }
+    // console.log(underscoreArray);
 
     //.join --joins the elements of an array into a string + returns the string
     //joins the [_,_,] into a string to remove commas
-    var joinArray = underscoreArray.join();
-    console.log(joinArray);
+    // var joinArray = underscoreArray.join();
+    // console.log(joinArray);
 
     //joinArray contains a string of underscore with commas, now replace the commas with spaces
-    var addSpaceBtwUnderScores = joinArray.replace(/,/g , " ");
-    console.log(addSpaceBtwUnderScores);
+    // var addSpaceBtwUnderScores = joinArray.replace(/,/g , " ");
+    // console.log(addSpaceBtwUnderScores);
 
     //the underscore will now be displayed on the webpage in place of the text in "User Types" of html file
 
-   var writeUnderscoreOnPage = document.getElementById("underscore").innerHTML = addSpaceBtwUnderScores;
+   //var writeUnderscoreOnPage = document.getElementById("underscore").innerHTML = addSpaceBtwUnderScores;
 
-   //User's input SECTION
-   document.getElementById("testButtonId").addEventListener("click",function(){
-     var userInput = document.getElementById("test").value;
-     console.log(userInput);
-     if (userInput.toUpperCase() === randomWord) {
-       console.log(userInput.toUpperCase );
-       document.getElementById("correctOrIncorrect").innerHTML="You are correct!"
-       }
-       else {
-         document.getElementById("correctOrIncorrect").innerHTML="Sorry this is incorrect. The answer is: " + randomWord
-       }
-   });
-   document.getElementById("tryAgain").addEventListener("click", function (event) {
-      randomWordGen();
-      3
-   })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 })
