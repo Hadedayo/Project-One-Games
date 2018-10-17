@@ -64,32 +64,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-      // make a set interval and have it call a function every second
-      // the function is going to first check if count is greater than 0
-      // if it is greater than 0, decrease count by 1
-      // Then, set counter's html to count
-      // if it's not greater than 0, end the game
 
-
-      // var counter = 60;
-      // var interval = setInterval(function() {
-      //     counter--;
-      //     // Display 'counter' wherever you want to display it.
-      //     if (counter <= 0) {
-      //      		clearInterval(interval);
-      //       	$('#timer').html("<h3>Game Over</h3>");
-      //         return;
-      //     }
-      //     else{
-      //     	$('#time').text(counter);
-      //       console.log("Timer --> " + counter);
-      //     }
-
-    //  }, 1000);
-
-      // if (counter < 5) {
-      //   document.getElementById("timer").style.color="red";
-      // }
 
 
 
@@ -111,43 +86,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-      //  function gameTimer() {
-      //    var timeleft = 15;
-      //    var gameTimer = setInterval(function(){
-      //      document.getElementById("progressBar").value = timeleft;
-      //       if(timeleft <= 0)
-      //         clearInterval(gameTimer);
-      //     },1000);
-      // }
-      // gameTimer();
-
-
-
-
-
-
-    //created an empty array
-    //for loop--> makes sure that for the length of random scrambled word, I need to have the same number of underscores
-    //Replaces the empty array with underscores
-    // var underscoreArray = [];
-    // for (var i = 0; i < actualGameWords.length; i++) {
-    //  underscoreArray[i] = "_";
-    //  }
-    // console.log(underscoreArray);
-
-    //.join --joins the elements of an array into a string + returns the string
-    //joins the [_,_,] into a string to remove commas
-    // var joinArray = underscoreArray.join();
-    // console.log(joinArray);
-
-    //joinArray contains a string of underscore with commas, now replace the commas with spaces
-    // var addSpaceBtwUnderScores = joinArray.replace(/,/g , " ");
-    // console.log(addSpaceBtwUnderScores);
-
-    //the underscore will now be displayed on the webpage in place of the text in "User Types" of html file
-
-   //var writeUnderscoreOnPage = document.getElementById("underscore").innerHTML = addSpaceBtwUnderScores;
-
+    
 
 
 
