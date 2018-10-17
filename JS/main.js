@@ -4,9 +4,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
   //alert("Welcome to Word Scramble " + userName + "." + " This is an opportunity to improve your spelling skills and expand your vocabulary. So Enjoy!");
 
   //When you click the button, it should display the instructions//
-  function instructionBtn (){
-    document.getElementById("instructionText").innerHTML = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididun";
-  }
+  document.getElementById('instructionBtn').addEventListener("click", function (event) {
+    var displayInstructions = document.getElementById("instructionText").innerHTML = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididun";
+  })
+
   var wordListArray = ["ARRAY", "FLEX", "CASCADING", "SHOW" , "SYNTAX", "MULTIPLY" , "TECHNOLOGY" , "SHEET"]
   var randomWord = wordListArray[Math.floor(Math.random() * wordListArray.length)];
 
