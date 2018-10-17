@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
        randomWordGen();
     })
 
-    
+
 
     //ENTER BUTTON
 
