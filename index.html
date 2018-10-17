@@ -38,23 +38,34 @@
 
     <div class="containerGame">
       <br>
+
+      <div class="container">
+        <div class="col-md-3"></div>
+
+        <div class="col-md-9">
+          <button type="button" id="playGame">Play Game</button>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
       <div class="container">
         <div class="col-md-3">
           <p><strong><span id="counter"></span> sec</strong></p>
         </div>
 
         <div class="col-md-9">
-          <h1 id="actualGameWords">X Y Z</h1>
+          <h1 id="actualGameWords">..</h1>
         </div>
         <div class="col-md-3"></div>
       </div>
       <br>
 
+
+
       <div class="container">
         <div class="col-md-3"></div>
         <div class="col-md-6">
-          <input type="text" id="test" type="submit" value="Type answer here">
-          <button id ="testButtonId">Submit</button>
+          <input type="text" id="submit" type="submit" value="Type answer here" onfocus="this.value ='' ">
+          <button id ="submitBtn">Submit</button>
         </div>
         <div class="col-md-3"></div>
       </div>
