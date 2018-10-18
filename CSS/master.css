@@ -1,6 +1,9 @@
 body{
   background-color: #253237;
 }
+#instructionText{
+  text-decoration: underline;
+}
 
 .text-center{
   font-size: 50px;

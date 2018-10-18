@@ -3,9 +3,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
 //var userName = prompt("Hi there! What is your name?");
   //alert("Welcome to Word Scramble " + userName + "." + " This is an opportunity to improve your spelling skills and expand your vocabulary. So Enjoy!");
 
-  //When you click the button, it should display the instructions//
 
-  var wordListArray = ["DISCOMBOBULATE", "FLEX", "CASCADING", "SHOW" , "SYNTAX", "MULTIPLY" , "TECHNOLOGY" , "SHEET", "SPLIT", "WINNER", "RANK", "REVOLT", "YIELD", "SUBMIT", "RECEIPT", "ATTENTION", "REMEMBER"]
+  var wordListArray = ["DISCOMBOBULATE", "FLEX", "CASCADING", "SHOW" , "SYNTAX", "MULTIPLY" , "INTERNET", "BASKET", "TECHNOLOGY" , "SHEET", "CLOUD", "SPLIT", "WINNER", "RANK", "REVOLT", "YIELD", "SUBMIT", "RECEIPT", "ATTENTION", "REMEMBER", "TWITTER", "ASSURANCE"]
   var randomWord = wordListArray[Math.floor(Math.random() * wordListArray.length)];
 
   function splitToCharacters(randomWord) {
@@ -70,40 +69,43 @@ document.addEventListener("DOMContentLoaded", function (event) {
   }
 
   var gameScore = 0;
-
-  document.getElementById("submitBtn").addEventListener("click",function(){
-   var userInput = document.getElementById("submit").value;
-   // 
-   // var key = event.keyCode;
-   // var userInput = document.getElementById('id').value;
-   // if (key===13) {
-   //
-   // }
-   //
-   // document.getElementById('id').addEventListener("keypress", function () {
-   //   var
-   // })
+  var userInput /*= document.getElementById("inputBox").value*/;
 
 
-   console.log(userInput);
-   if (userInput.toUpperCase() === randomWord) {
-     console.log(userInput.toUpperCase );
-     document.getElementById("correctOrIncorrect").innerHTML="You are correct!"
-     document.getElementById("correctOrIncorrect").style.backgroundColor = "green";
-     document.getElementById('id')
-     randomWordGen();
-     gameScore ++;
-     document.getElementById("score").innerHTML = gameScore;
-    }
-     else {
-       document.getElementById("correctOrIncorrect").innerHTML="Incorrect. The answer was: " + randomWord
-       document.getElementById("correctOrIncorrect").style.backgroundColor = "red";
-       randomWordGen();
-       gameScore --;
-       document.getElementById("score").innerHTML = gameScore;
+   document.getElementById('inputBox').addEventListener("keypress", function (event) {
+     console.log("code"+ event.keyCode);
+     if (event.keyCode == 13) {
+       console.log(userInput+  +"after 13");
+       userInput = document.getElementById("inputBox").value;  //gets value of input box after enter
+
+       // console.log(userInput.toUpperCase(), randomWord);
+       if (userInput.toUpperCase() === randomWord) {
+         console.log("inside if");
+         console.log(userInput.toUpperCase );
+         document.getElementById("correctOrIncorrect").innerHTML = "You are correct!"
+         document.getElementById("correctOrIncorrect").style.backgroundColor = "green";
+         randomWordGen();
+         gameScore ++;
+         document.getElementById("score").innerHTML = gameScore;
+        }
+
+        else {
+           document.getElementById("correctOrIncorrect").innerHTML="Incorrect"
+           document.getElementById("correctOrIncorrect").style.backgroundColor = "red";
+           randomWordGen();
+           gameScore --;
+           document.getElementById("score").innerHTML = gameScore;
+         }
      }
 
+
+
    })
+
+
+
+
+
 
 
     document.getElementById("playGame").addEventListener("click",function(){
