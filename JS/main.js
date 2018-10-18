@@ -38,9 +38,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
       //document.getElementById("counter").style.color = "red";
     }
     if (count == 0) {
-      document.getElementById("counter").innerHTML = "GAME OVER";
+      document.getElementById("gameOverScore").innerHTML = "GAME OVER " + "YOU SCORED " +gameScore + " POINTS";
     }
-  },
+   },
     1000);
   }
 
@@ -71,10 +71,20 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   var gameScore = 0;
 
- document.getElementById("submitBtn").addEventListener("click",function(){
+  document.getElementById("submitBtn").addEventListener("click",function(){
    var userInput = document.getElementById("submit").value;
+   // 
+   // var key = event.keyCode;
+   // var userInput = document.getElementById('id').value;
+   // if (key===13) {
+   //
+   // }
+   //
+   // document.getElementById('id').addEventListener("keypress", function () {
+   //   var
+   // })
 
-   
+
    console.log(userInput);
    if (userInput.toUpperCase() === randomWord) {
      console.log(userInput.toUpperCase );
@@ -94,6 +104,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
      }
 
    })
+
 
     document.getElementById("playGame").addEventListener("click",function(){
        countdown();
