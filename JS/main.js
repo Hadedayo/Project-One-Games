@@ -19,28 +19,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
     return rmv;
   }
 
-  // make a set interval and have it call a function every second
-  // the function is going to first check if count is greater than 0
-  // if it is greater than 0, decrease count by 1
-  // Then, set counter's html to count
-  // if it's not greater than 0, end the game
-
-  function countdown() {
-    var count = 31;
-    setInterval(function(){
-    if (count > 0) {
-      count --;
-      console.log(count);
-      document.getElementById("counter").innerHTML = count;
-    };
-    if (count == 0) {
-      console.log(count);
-      document.getElementsByClassName('containerGame')[0].innerHTML = "";
-    }
-   },
-    1000);
-  }
-
   function randomWordGen() {
     randomWord = wordListArray[Math.floor(Math.random() * wordListArray.length)];
     splitToCharacters (randomWord);
@@ -65,6 +43,33 @@ document.addEventListener("DOMContentLoaded", function (event) {
     console.log("a="+actualGameWords.length);
     document.getElementById("actualGameWords").innerHTML = actualGameWords;
   }
+
+
+    // make a set interval and have it call a function every second
+    // the function is going to first check if count is greater than 0
+    // if it is greater than 0, decrease count by 1
+    // Then, set counter's html to count
+    // if it's not greater than 0, end the game
+
+    function countdown() {
+      var count = 11;
+      setInterval(function(){
+      if (count > 0) {
+        count --;
+        console.log(count);
+        document.getElementById("counter").innerHTML = count;
+      };
+      if (count == 0) {
+        console.log(count);
+        document.getElementsByClassName('containerGame')[0].innerHTML = "";//hides box when game is over
+        // console.log(document.getElementsByClassName('containerGame')[0].innerHTML + "hide box");
+        var test = document.getElementById("timeIsUp").innerHTML;
+        console.log("test = "+test);
+        document.getElementById("timeIsUp").innerHTML = "GAME OVER." /*+ gameScore + "POINTS"*/
+      }
+     },
+      1000);
+    }
 
   var gameScore = 0;
   var userInput /*= document.getElementById("inputBox").value*/;
