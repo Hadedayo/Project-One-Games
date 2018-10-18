@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     // if it's not greater than 0, end the game
 
     function countdown() {
-      var count = 11;
+      var count = 5;
       setInterval(function(){
       if (count > 0) {
         count --;
@@ -60,12 +60,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
         document.getElementById("counter").innerHTML = count;
       };
       if (count == 0) {
-        console.log(count);
+        //console.log(count);
         document.getElementsByClassName('containerGame')[0].innerHTML = "";//hides box when game is over
         // console.log(document.getElementsByClassName('containerGame')[0].innerHTML + "hide box");
+        document.getElementsByClassName('containerGame')[0].style.borderStyle = "none"; //when game is over there is no border style (the dotted line)
         var test = document.getElementById("timeIsUp").innerHTML;
         console.log("test = "+test);
-        document.getElementById("timeIsUp").innerHTML = "GAME OVER." /*+ gameScore + "POINTS"*/
+        document.getElementById("timeIsUp").innerHTML = "GAME OVER" /*+ gameScore + "POINTS"*/
       }
      },
       1000);

@@ -22,6 +22,7 @@ body{
 .containerGame{
   border: 5px dotted #7C3238;
   background-color:#F4442E ;
+  
 
 }
 .text-justify{
@@ -44,7 +45,7 @@ body{
 }
 #timeIsUp{
   color: white;
-  font-size: 20px;
+  font-size: 40px;
 }
 
 
