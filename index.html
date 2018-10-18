@@ -15,22 +15,25 @@
 
 
     <title>Hassanat's Word Scramble Game</title>
-    <link rel="stylesheet" href="./CSS/master.css">
+    <link rel="stylesheet" href="./CSS/master.css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="./JS/main.js"></script>
   </head>
   <body>
     <div class="container">
+      <br>
       <div class="container">
         <div class="col-md-12">
-          <h3> Word Scramble Game</h3>
+          <h2 class="text-center"><em>Word Scramble Game</em></h3>
+          <br>
+          <h4>See how quickly you can rearrange the jumbled letters and form the right word in our free, fun online game.</h4>
         </div>
       </div>
         <br>
 
       <div class="container">
         <div class="col-md-6">
-          <h4>Instructions</h4>
-          <p>This game ... dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <h3>Instructions</h3>
+          <p class="text-justify">This game ... dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
 
       </div>
@@ -40,29 +43,28 @@
       <br>
 
       <div class="container">
-        <div class="col-md-3"></div>
-
+        <div class="col-md-3">
+          <p id="time"><strong>TIME: <span id="counter"></span></strong></p>
+        </div>
         <div class="col-md-9">
           <button type="button" id="playGame" class="btn btn-primary">Play Game</button>
         </div>
+        <br>
         <div class="col-md-3"></div>
       </div>
+      <br>
       <div class="container">
-        <div class="col-md-3">
-          <p><strong><span id="counter"></span></strong></p>
+        <div class="col-md-12">
+          <h1 id="actualGameWords" class="text-center"></h1>
         </div>
-
-        <div class="col-md-9">
-          <h1 id="actualGameWords">..</h1>
-        </div>
-        <div class="col-md-3"></div>
       </div>
+      <br>
       <br>
 
       <div class="container">
         <div class="col-md-3"></div>
         <div class="col-md-6">
-          <input type="text"  id="submit" type="submit" value="Type answer here" onfocus="this.value ='' ">
+          <input type="text"  id="submit" type="submit" value="Type answer here" onfocus="this.value = '' ">
           <button id ="submitBtn" class="btn btn-success">Submit</button>
         </div>
         <div class="col-md-3"></div>
@@ -71,40 +73,29 @@
       <br>
 
           <div class="container">
-        <div class="col-md-3"></div>
+        <div class="col-md-3">
+          <p id="scoring"><strong>SCORE: <span id="score"></strong></span></p>
+        </div>
         <div class="col-md-6">
           <p id="correctOrIncorrect"></p>
         </div>
-        <div class="col-md-3"></div></div>
-
+        <div class="col-md-3"></div>
+      </div>
+      <br>
       <br>
 
-      <div class="container">
-        <p>SCORE: <span id="score"></span></p>
-
-
-      </div>
     </div>
 
-
-
-
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <hr>
-        <footer>
-          <p>Posted by: Hassanat Adedayo <br>
-            Contact information: <a href="mailto:hadedayo@spartaglobal.com">
+    <br>
+    <br>
+    <br>
+    <hr>
+    <footer>
+      <p>Posted by: Hassanat Adedayo <br>
+          Contact information: <a href="mailto:hadedayo@spartaglobal.com">
             hadedayo@spartaglobal.com</a>.
-          </p>
-
-        </footer>
+      </p>
+    </footer>
 
     </div>
   </body>

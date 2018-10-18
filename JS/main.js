@@ -5,10 +5,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   //When you click the button, it should display the instructions//
 
-  var gameScore = 0;
-  var a=5;
-
-  var wordListArray = ["DISCOMBOBULATE", "FLEX", "CASCADING", "SHOW" , "SYNTAX", "MULTIPLY" , "TECHNOLOGY" , "SHEET", "SPLIT", "WINNER", "RANK", "REVOLT", "YIELD"]
+  var wordListArray = ["DISCOMBOBULATE", "FLEX", "CASCADING", "SHOW" , "SYNTAX", "MULTIPLY" , "TECHNOLOGY" , "SHEET", "SPLIT", "WINNER", "RANK", "REVOLT", "YIELD", "SUBMIT", "RECEIPT", "ATTENTION", "REMEMBER"]
   var randomWord = wordListArray[Math.floor(Math.random() * wordListArray.length)];
 
   function splitToCharacters(randomWord) {
@@ -38,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       document.getElementById("counter").innerHTML = count;
     };
     if (count < 11) {
-      document.getElementById("counter").style.color = "red";
+      //document.getElementById("counter").style.color = "red";
     }
     if (count == 0) {
       document.getElementById("counter").innerHTML = "GAME OVER";
@@ -72,23 +69,28 @@ document.addEventListener("DOMContentLoaded", function (event) {
     document.getElementById("actualGameWords").innerHTML = actualGameWords;
   }
 
+  var gameScore = 0;
 
  document.getElementById("submitBtn").addEventListener("click",function(){
    var userInput = document.getElementById("submit").value;
+
+   
    console.log(userInput);
    if (userInput.toUpperCase() === randomWord) {
      console.log(userInput.toUpperCase );
      document.getElementById("correctOrIncorrect").innerHTML="You are correct!"
      document.getElementById("correctOrIncorrect").style.backgroundColor = "green";
+     document.getElementById('id')
      randomWordGen();
      gameScore ++;
-     document.getElementById("score").innerHTML =+ " score,";
+     document.getElementById("score").innerHTML = gameScore;
     }
      else {
        document.getElementById("correctOrIncorrect").innerHTML="Incorrect. The answer was: " + randomWord
        document.getElementById("correctOrIncorrect").style.backgroundColor = "red";
        randomWordGen();
        gameScore --;
+       document.getElementById("score").innerHTML = gameScore;
      }
 
    })
@@ -100,7 +102,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-    //ENTER BUTTON
 
 
 
