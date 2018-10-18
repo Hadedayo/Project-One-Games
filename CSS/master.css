@@ -1,13 +1,22 @@
 body{
   background-color: #253237;
 }
-#instructionText{
-  text-decoration: underline;
+#introductionText{
+  color: #388659;
 }
 
+.instructionText{
+  color: #F6AA1C;
+  font-size: 20px;
+}
+
+#instructionHeading{
+    text-decoration: underline;
+    color: #3AAED8;
+}
 .text-center{
   font-size: 50px;
-  color: #7C3238;
+  color: #3AAED8;
 }
 
 .containerGame{
@@ -16,7 +25,8 @@ body{
 
 }
 .text-justify{
-  color: #F4442E;
+  color: #F6AA1C;
+  font-size: 20px;
 }
 
 #actualGameWords{
@@ -32,6 +42,11 @@ body{
   color: lightblue;
   font-size: 20px;
 }
+#gameOverScore{
+  color: white;
+  font-size: 20px;
+}
+
 
 footer{
   color: white;

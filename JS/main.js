@@ -70,12 +70,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   var gameScore = 0;
   var userInput /*= document.getElementById("inputBox").value*/;
+  var a = 5;
 
 
    document.getElementById('inputBox').addEventListener("keypress", function (event) {
      console.log("code"+ event.keyCode);
      if (event.keyCode == 13) {
-       console.log(userInput+  +"after 13");
+       console.log(userInput+  "after keycode");
        userInput = document.getElementById("inputBox").value;  //gets value of input box after enter
 
        // console.log(userInput.toUpperCase(), randomWord);
@@ -85,7 +86,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
          document.getElementById("correctOrIncorrect").innerHTML = "You are correct!"
          document.getElementById("correctOrIncorrect").style.backgroundColor = "green";
          randomWordGen();
-         gameScore ++;
+         document.getElementById("inputBox").value = "";
+         gameScore +=5;
          document.getElementById("score").innerHTML = gameScore;
         }
 
@@ -93,39 +95,17 @@ document.addEventListener("DOMContentLoaded", function (event) {
            document.getElementById("correctOrIncorrect").innerHTML="Incorrect"
            document.getElementById("correctOrIncorrect").style.backgroundColor = "red";
            randomWordGen();
-           gameScore --;
+           document.getElementById("inputBox").value = "";
+           gameScore -=5;
            document.getElementById("score").innerHTML = gameScore;
          }
      }
-
-
-
    })
-
-
-
-
-
 
 
     document.getElementById("playGame").addEventListener("click",function(){
        countdown();
        randomWordGen();
     })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 })
