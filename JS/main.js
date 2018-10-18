@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     // if it's not greater than 0, end the game
 
     function countdown() {
-      var count = 5;
+      var count = 31;
       setInterval(function(){
       if (count > 0) {
         count --;
