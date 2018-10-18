@@ -26,18 +26,16 @@ document.addEventListener("DOMContentLoaded", function (event) {
   // if it's not greater than 0, end the game
 
   function countdown() {
-    var count = 61;
+    var count = 31;
     setInterval(function(){
     if (count > 0) {
       count --;
       console.log(count);
       document.getElementById("counter").innerHTML = count;
     };
-    if (count < 11) {
-      //document.getElementById("counter").style.color = "red";
-    }
     if (count == 0) {
-      document.getElementById("gameOverScore").innerHTML = "GAME OVER " + "YOU SCORED " +gameScore + " POINTS";
+      console.log(count);
+      document.getElementsByClassName('containerGame')[0].innerHTML = "";
     }
    },
     1000);
@@ -70,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   var gameScore = 0;
   var userInput /*= document.getElementById("inputBox").value*/;
-  var a = 5;
+
 
 
    document.getElementById('inputBox').addEventListener("keypress", function (event) {
