@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function (event) {
 
 //var userName = prompt("Hi there! What is your name?");
-  //alert("Welcome to Word Scramble " + userName + "." + " This is an opportunity to improve your spelling skills and expand your vocabulary. So Enjoy!");
+//alert("Welcome to Word Scramble " + userName + "." + " This is an opportunity to improve your spelling skills and expand your vocabulary. So Enjoy!");
 
 
-  var wordListArray = ["DISCOMBOBULATE", "FLEX", "CASCADING", "SHOW" , "SYNTAX", "MULTIPLY" , "INTERNET", "BASKET", "TECHNOLOGY" , "SHEET", "CLOUD", "SPLIT", "WINNER", "RANK", "REVOLT", "YIELD", "SUBMIT", "RECEIPT", "ATTENTION", "REMEMBER", "TWITTER", "ASSURANCE"]
+  var wordListArray = ["DISCOMBOBULATE", "FLEX", "CASCADING", "SHOW" , "FACEBOOK",  "SYNTAX", "MULTIPLY" , "INTERNET", "BASKET", "TECHNOLOGY" , "SHEET", "CLOUD", "SPLIT", "WINNER", "RANK", "REVOLT", "YIELD", "SUBMIT", "RECEIPT", "ATTEND", "REMEMBER", "TWITTER", "ASSURANCE"]
   var randomWord = wordListArray[Math.floor(Math.random() * wordListArray.length)];
 
   function splitToCharacters(randomWord) {
@@ -67,13 +67,21 @@ document.addEventListener("DOMContentLoaded", function (event) {
         var test = document.getElementById("timeIsUp").innerHTML;
         console.log("test = "+test);
         document.getElementById("timeIsUp").innerHTML = "GAME OVER" /*+ gameScore + "POINTS"*/
+
+        //create a replay button
+        // var createReplayButton = document.createElement("button");
+        // button.innerHTML = "REPLAY";
+        // var replay = document.getElementsByClassName("containerTimeUp");
+        // replay.appendChild(replay);
+
+
       }
      },
       1000);
     }
 
   var gameScore = 0;
-  var userInput /*= document.getElementById("inputBox").value*/;
+  var userInput /*= document.getElementById("inputBox").value;*/
 
 
 
@@ -112,4 +120,25 @@ document.addEventListener("DOMContentLoaded", function (event) {
        randomWordGen();
     })
 
+    document.getElementById("replayBtn").addEventListener("click",function(){
+      location.reload();
+    })
+
 })
+
+
+// function replay() {
+//   var x = document.getElementById("replayBtn");
+//   if (x.style.display === "none") {
+//     x.style.display = "block" ;
+//   }
+//   else {
+//     x.style.display = "none"
+//   }
+//
+// }
+//
+// var click = document.getElementById("replayBtn").addEventListener("click", function() {})
+// console.log(click);
+// countdown();
+// randomWordGen();

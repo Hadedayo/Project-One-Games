@@ -39,7 +39,7 @@
                 <li>The scrambled word shows up on the screen and the aim of the game is for the user to rearrange the word.</li>
                 <li>Type the correct word into the box and press the Enter key.</li>
                 <li>The user gains points if the unscrambled word is  correct and loses points otherwise.</li>
-                <li>This game lasts for 60 seconds.</li>
+                <li>This game lasts for 30 seconds.</li>
                 <li>The user should aim to unscramble as many words as possible before the time runs out.</li>
                 <li>So keep calm and get unscrambling guys!</li>
               </ul>
@@ -55,7 +55,7 @@
           <p id="time"><strong>TIME: <span id="counter"></span></strong></p>
         </div>
         <div class="col-md-9">
-          <button type="button" id="playGame" class="btn btn-primary">Play Game</button>
+          <button type="button" id="playGame" class="btn btn-success">PLAY GAME</button>
         </div>
         <br>
         <div class="col-md-3"></div>
@@ -92,10 +92,11 @@
     <br>
     <br>
     <br>
-    <div class="container">
+    <div class="containerTimeUp">
       <div class="col-md-12">
         <p id="timeIsUp"></p>
       </div>
+      <button type="button" name="button" class="btn btn-warning" id="replayBtn" onclick="replay()">REPLAY</button>
     </div>
 
 
@@ -104,6 +105,7 @@
     <br>
     <hr>
     <footer>
+      <br>
       <p>Posted by: Hassanat Adedayo <br>
           Contact information: <a href="mailto:hadedayo@spartaglobal.com">
             hadedayo@spartaglobal.com</a>.
