@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+
+
+    <title>Hassanat's Word Scramble Game</title>
+    <link rel="stylesheet" href="./CSS/master.css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="./JS/main.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <br>
+      <div class="container">
+        <div class="col-md-12">
+          <h2 class="text-center"><em>Word Scramble Game</em></h3>
+          <br>
+          <h4 id="introductionText">See how quickly you can rearrange the jumbled letters and form the right word in our free, fun, online game.</h4>
+        </div>
+      </div>
+        <br>
+
+      <div class="container">
+        <div class="col-md-12">
+          <h3 id="instructionHeading"><em>How to Play:</em></h3>
+            <p class="text-justify">
+              <ul class="instructionText">
+                <li>Start by clicking the Play Game button.</li>
+                <li>The scrambled word shows up on the screen and the aim of the game is for the user to rearrange the word.</li>
+                <li>Type the correct word into the box and press the Enter key.</li>
+                <li>The user gains points if the unscrambled word is  correct and loses points otherwise.</li>
+                <li>This game lasts for 30 seconds.</li>
+                <li>The user should aim to unscramble as many words as possible before the time runs out.</li>
+                <li>So keep calm and get unscrambling guys!</li>
+              </ul>
+            </p>
+        </div>
+      </div>
+      <br>
+      <br>
+    <div class="containerGame">
+      <br>
+      <div class="container">
+        <div class="col-md-3">
+          <p id="time"><strong>TIME: <span id="counter"></span></strong></p>
+        </div>
+        <div class="col-md-9">
+          <button type="button" id="playGame" class="btn btn-success">PLAY GAME</button>
+        </div>
+        <br>
+        <div class="col-md-3"></div>
+      </div>
+        <br>
+      <div class="container">
+        <div class="col-md-12">
+          <h1 id="actualGameWords" class="text-center"></h1>
+          </div>
+      </div>
+        <br>
+        <br>
+      <div class="container">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <input type="text"  id="inputBox"  value="Type answer here" onfocus="this.value = '' ">
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+        <br>
+        <br>
+      <div class="container">
+        <div class="col-md-3">
+            <p id="scoring"><strong>SCORE: <span id="score"></strong></span></p>
+        </div>
+      <div class="col-md-6">
+        <p id="correctOrIncorrect"></p>
+      </div>
+        <div class="col-md-3"></div>
+      </div>
+        <br>
+        <br>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="containerTimeUp">
+      <div class="col-md-12">
+        <p id="timeIsUp"></p>
+      </div>
+      <button type="button" name="button" class="btn btn-warning" id="replayBtn" onclick="replay()">REPLAY</button>
+    </div>
+
+    <hr>
+    <footer>
+      <br>
+      <p>Posted by: Hassanat Adedayo <br>
+          Contact information: <a href="mailto:hadedayo@spartaglobal.com">
+            hadedayo@spartaglobal.com</a>.
+      </p>
+    </footer>
+
+    </div>
+  </body>
+</html>

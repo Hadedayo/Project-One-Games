@@ -1,0 +1,57 @@
+body{
+ background-color: #253237;
+  /* background-image:url("../IMAGES/blur.png"); */
+
+}
+#introductionText{
+  color: #F6AA1C;
+}
+
+.instructionText{
+  color: #F6AA1C;
+  font-size: 20px;
+}
+
+#instructionHeading{
+    text-decoration: underline;
+    color: #3AAED8;
+}
+.text-center{
+  font-size: 50px;
+  color: #3AAED8;
+}
+
+.containerGame{
+  border: 5px dotted #7C3238;
+  background-color:#F4442E ;
+
+
+}
+.text-justify{
+  color: #F6AA1C;
+  font-size: 20px;
+}
+
+#actualGameWords{
+  font-size: 80px;
+  color: white;
+}
+
+#correctOrIncorrect{
+  font-size: 20px;
+  color: #EAF7CF;
+}
+#time, #scoring{
+  color: lightblue;
+  font-size: 20px;
+}
+#timeIsUp{
+  color: white;
+  font-size: 40px;
+}
+
+
+footer{
+  color: white;
+  font-size: 15px;
+}
