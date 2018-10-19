@@ -66,7 +66,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
         document.getElementsByClassName('containerGame')[0].style.borderStyle = "none"; //when game is over there is no border style (the dotted line)
         var test = document.getElementById("timeIsUp").innerHTML;
         console.log("test = "+test);
-        document.getElementById("timeIsUp").innerHTML = "GAME OVER" /*+ gameScore + "POINTS"*/
+        document.getElementById("timeIsUp").innerHTML = "GAME OVER YOU SCORED " + gameScore + " POINTS"
+
 
         //create a replay button
         // var createReplayButton = document.createElement("button");
