@@ -3,9 +3,55 @@ document.addEventListener("DOMContentLoaded", function (event) {
 //var userName = prompt("Hi there! What is your name?");
 //alert("Welcome to Word Scramble " + userName + "." + " This is an opportunity to improve your spelling skills and expand your vocabulary. So Enjoy!");
 
+var wordListArray = [
+    "DISCOMBOBULATE",
+    "CASCADING",
+    "SHOW",
+    "RECEIPT",
+    // "FACEBOOK",
+    // "SYNTAX",
+    // "MULTIPLY",
+    // "INTERNET",
+    // "BASKET",
+    // "TECHNOLOGY",
+    //  "SHEET",
+    //  "CLOUD",
+    //  "SPLIT",
+    //  "WINNER",
+    //  "RANK",
+    //  "REVOLT",
+    //  "YIELD",
+    //  "SUBMIT",
+    //  "ATTEND",
+    //  "REMEMBER",
+    //  "TWITTER",
+    //  "ASSURANCE"
+  ]
 
-  var wordListArray = ["DISCOMBOBULATE", "FLEX", "CASCADING", "SHOW" , "FACEBOOK",  "SYNTAX", "MULTIPLY" , "INTERNET", "BASKET", "TECHNOLOGY" , "SHEET", "CLOUD", "SPLIT", "WINNER", "RANK", "REVOLT", "YIELD", "SUBMIT", "RECEIPT", "ATTEND", "REMEMBER", "TWITTER", "ASSURANCE"]
-  var randomWord = wordListArray[Math.floor(Math.random() * wordListArray.length)];
+  var clue_Object = {
+  DISCOMBOBULATE: "To be in a state of confusion",
+  CASCADING: "CSS",
+  SHOW: "To display something",
+  RECEIPT: "Proof of purchase",
+}
+
+// keys_of_object = Object.keys(clue_Object);
+// values_of_object = Object.values(clue_Object);
+// console.log(keys_of_object + " " + values_of_object);
+console.log(Object.entries(clue_Object));
+
+for (var i = 0; i < clue_Object[].length; i++) {
+
+}
+
+
+
+var randomWord = clue_Object[Math.floor(Math.random() * clue_Object.length)];
+console.log("XYZ="+randomWord);
+
+
+
+  // var randomWord = wordListArray[Math.floor(Math.random() * wordListArray.length)];
 
   function splitToCharacters(randomWord) {
     var characters = randomWord.split("");
@@ -23,33 +69,25 @@ document.addEventListener("DOMContentLoaded", function (event) {
     randomWord = wordListArray[Math.floor(Math.random() * wordListArray.length)];
     splitToCharacters (randomWord);
 
-    //.sort--sorts the items of an array alphabetically or numerically
     var scramble = splitToCharacters (randomWord);
     scramble.sort()
     console.log(scramble);
 
-    //.join --joins the elements of an array into a string + returns the string
+
     var joinArray = scramble.join();
     console.log(joinArray);
 
-    //this function removes the commas in the string
-    // replace the commas with what ever character you want, e.g I replaced the commas with space
-    //g flag - generic expression that replaces all
-
-    removeComma(joinArray);
-
-    //displays the string without commas onto the webpage
     var actualGameWords = removeComma(joinArray);
     console.log("a="+actualGameWords.length);
     document.getElementById("actualGameWords").innerHTML = actualGameWords;
-  }
+ }
+    //.sort--sorts the items of an array alphabetically or numerically
+    //.join --joins the elements of an array into a string + returns the string
+    // replace the commas with what ever character you want, e.g I replaced the commas with space
+    //g flag - generic expression that replaces all
 
 
-    // make a set interval and have it call a function every second
-    // the function is going to first check if count is greater than 0
-    // if it is greater than 0, decrease count by 1
-    // Then, set counter's html to count
-    // if it's not greater than 0, end the game
+
 
     function countdown() {
       var count = 31;
@@ -70,19 +108,23 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 
         //create a replay button
-        // var createReplayButton = document.createElement("button");
-        // button.innerHTML = "REPLAY";
-        // var replay = document.getElementsByClassName("containerTimeUp");
-        // replay.appendChild(replay);
-
+        var createReplayButton = document.createElement("button");
+        button.innerHTML = "REPLAY";
+        var replay = document.getElementsByClassName("containerTimeUp");
+        replay.appendChild(replay);
 
       }
      },
       1000);
     }
+    // make a set interval and have it call a function every second
+    // the function is going to first check if count is greater than 0
+    // if it is greater than 0, decrease count by 1
+    // Then, set counter's html to count
+    // if it's not greater than 0, end the game
 
-  var gameScore = 0;
-  var userInput /*= document.getElementById("inputBox").value;*/
+    var gameScore = 0;
+    var userInput = document.getElementById("inputBox").value;
 
 
 
@@ -121,11 +163,18 @@ document.addEventListener("DOMContentLoaded", function (event) {
        randomWordGen();
     })
 
+    document.getElementById("hintBtn").addEventListener("click", function () {
+      console.log(document.getElementById("hintBtn").addEventListener);
+
+    })
+
     document.getElementById("replayBtn").addEventListener("click",function(){
       location.reload();
     })
 
+
 })
+
 
 
 // function replay() {
@@ -139,7 +188,3 @@ document.addEventListener("DOMContentLoaded", function (event) {
 //
 // }
 //
-// var click = document.getElementById("replayBtn").addEventListener("click", function() {})
-// console.log(click);
-// countdown();
-// randomWordGen();
