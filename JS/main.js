@@ -3,51 +3,58 @@ document.addEventListener("DOMContentLoaded", function (event) {
 //var userName = prompt("Hi there! What is your name?");
 //alert("Welcome to Word Scramble " + userName + "." + " This is an opportunity to improve your spelling skills and expand your vocabulary. So Enjoy!");
 
-var wordListArray = [
-    "DISCOMBOBULATE",
-    "CASCADING",
-    "SHOW",
-    "RECEIPT",
-    // "FACEBOOK",
-    // "SYNTAX",
-    // "MULTIPLY",
-    // "INTERNET",
-    // "BASKET",
-    // "TECHNOLOGY",
-    //  "SHEET",
-    //  "CLOUD",
-    //  "SPLIT",
-    //  "WINNER",
-    //  "RANK",
-    //  "REVOLT",
-    //  "YIELD",
-    //  "SUBMIT",
-    //  "ATTEND",
-    //  "REMEMBER",
-    //  "TWITTER",
-    //  "ASSURANCE"
-  ]
+// var wordListArray = [
+//     // "DISCOMBOBULATE",
+//     // "CASCADING",
+//     // "SHOW",
+//     // "RECEIPT",
+//     // "FACEBOOK",
+//     // "SYNTAX",
+//     // "MULTIPLY",
+//     // "INTERNET",
+//     // "BASKET",
+//     // "TECHNOLOGY",
+//     //  "SHEET",
+//     //  "CLOUD",
+//     //  "SPLIT",
+//     //  "WINNER",
+//     //  "RANK",
+//     //  "REVOLT",
+//     //  "YIELD",
+//     //  "SUBMIT",
+//     //  "ATTEND",
+//     //  "REMEMBER",
+//     //  "TWITTER",
+//     //  "ASSURANCE"
+//   ]
 
-  var clue_Object = {
-  DISCOMBOBULATE: "To be in a state of confusion",
-  CASCADING: "CSS",
-  SHOW: "To display something",
-  RECEIPT: "Proof of purchase",
-}
+var hint_Object = [
+  {
+    word: "DISCOMBOBULATE",
+    clue: "To be in a state of confusion"
+  },
+  {
+    word: "CASCADING",
+    clue: "CSS"
+  },
+  {
+    word: "SHOW",
+    clue: "To display something"
+  },
+  {
+    word: "RECEIPT",
+    clue: "Proof of purchase"
+ }
+];
 
-// keys_of_object = Object.keys(clue_Object);
-// values_of_object = Object.values(clue_Object);
-// console.log(keys_of_object + " " + values_of_object);
-console.log(Object.entries(clue_Object));
 
-for (var i = 0; i < clue_Object[].length; i++) {
+// for (var i = 0; i < hint_Object.length; i++) {
+//   console.log(hint_Object[i].word);
+// }
 
-}
-
-
-
-var randomWord = clue_Object[Math.floor(Math.random() * clue_Object.length)];
-console.log("XYZ="+randomWord);
+var i = 0;
+var randomWord = hint_Object[i].word[Math.floor(Math.random() * hint_Object[i].length)];
+console.log( randomWord);
 
 
 
@@ -66,7 +73,7 @@ console.log("XYZ="+randomWord);
   }
 
   function randomWordGen() {
-    randomWord = wordListArray[Math.floor(Math.random() * wordListArray.length)];
+    randomWord = hint_Object[i].word[Math.floor(Math.random() * hint_Object[i].word.length)];
     splitToCharacters (randomWord);
 
     var scramble = splitToCharacters (randomWord);
@@ -103,15 +110,9 @@ console.log("XYZ="+randomWord);
         // console.log(document.getElementsByClassName('containerGame')[0].innerHTML + "hide box");
         document.getElementsByClassName('containerGame')[0].style.borderStyle = "none"; //when game is over there is no border style (the dotted line)
         var test = document.getElementById("timeIsUp").innerHTML;
-        console.log("test = "+test);
+        console.log("test countdown = "+test);
         document.getElementById("timeIsUp").innerHTML = "GAME OVER YOU SCORED " + gameScore + " POINTS"
 
-
-        //create a replay button
-        var createReplayButton = document.createElement("button");
-        button.innerHTML = "REPLAY";
-        var replay = document.getElementsByClassName("containerTimeUp");
-        replay.appendChild(replay);
 
       }
      },
@@ -165,7 +166,9 @@ console.log("XYZ="+randomWord);
 
     document.getElementById("hintBtn").addEventListener("click", function () {
       console.log(document.getElementById("hintBtn").addEventListener);
-
+      if (randomWord ==hint_Object[i].word ) {
+        document.getElementById("hintText").innerHTML=hint_Object[i].clue;
+      }
     })
 
     document.getElementById("replayBtn").addEventListener("click",function(){
